@@ -58,9 +58,18 @@
             color: inherit;
         }
 
-        .tool-card:hover {
+        a.tool-card:hover {
             transform: translateY(-5px);
             box-shadow: 0 8px 12px rgba(0,0,0,0.15);
+        }
+        
+        .tool-card.no-link {
+            cursor: default;
+        }
+        
+        .tool-card.no-link:hover {
+            transform: none;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
         }
 
         .tool-card h2 {
@@ -108,6 +117,32 @@
             position: absolute;
             left: 0;
             color: #4CAF50;
+            font-weight: bold;
+        }
+        
+        .tool-card .features li.link-item {
+            padding-left: 0;
+        }
+        
+        .tool-card .features li.link-item:before {
+            content: none;
+        }
+        
+        .tool-card .features li.link-item a {
+            color: #3b82f6;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            padding: 6px 0;
+        }
+        
+        .tool-card .features li.link-item a:hover {
+            text-decoration: underline;
+        }
+        
+        .tool-card .features li.link-item a:before {
+            content: "→";
+            margin-right: 8px;
             font-weight: bold;
         }
 
@@ -190,14 +225,14 @@
                         <li>Rey Auditory Verbal Learning Test (RAVLT)</li>
                         <li>Hopkins Verbal Learning Test-Revised (HVLT-R)</li>
                         <li>Seoul Verbal Learning Test (SVLT)</li>
-                        <li>CERAD Word List Memory Test</li>
+                        <li class="link-item"><a href="VMEMSCORING-cerad-analyzer.html">CERAD Word List Memory Test (재인 검사 지원)</a></li>
                         <li>Selective Reminding Test (SRT)</li>
                         <li>Free and Cued Selective Reminding Test (FCSRT)</li>
                     </ul>
                 </div>
             </a>
 
-            <a href="VMEMSCORING-cerad-analyzer.html" class="tool-card">
+            <div class="tool-card no-link">
                 <h2>CERAD 기억 검사 분석기</h2>
                 <p class="description">
                     CERAD-NP 단어 목록 기억 검사를 위한 전문 분석 도구입니다.
@@ -215,7 +250,7 @@
                         <li>인지 프로파일 요약</li>
                     </ul>
                 </div>
-            </a>
+            </div>
         </div>
 
         <div class="info-section">
